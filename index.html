@@ -174,4 +174,4 @@ $('exportBtn').addEventListener('click',exportBackup);$('exportBtn2').addEventLi
 $('resetProgress').addEventListener('click',()=>{if(!confirm('确定清空全部学习记录、掌握状态和课程完成记录吗？词库仍会保留。建议先导出备份。'))return;state={day:1,cycle:1,progress:{},introduced:{},completed:{},records:[],mistakes:[]};save();renderRecords();renderMetrics();toast('学习进度已清空')});
 $('helpBtn').addEventListener('click',()=>$('helpModal').classList.add('show'));$('closeHelp').addEventListener('click',()=>$('helpModal').classList.remove('show'));$('helpModal').addEventListener('click',e=>{if(e.target===$('helpModal'))$('helpModal').classList.remove('show')});
 load();if(!Array.isArray(state.journalRead))state.journalRead=[];if(!Array.isArray(state.journalSaved))state.journalSaved=[];if(typeof state.journalOffset!=='number')state.journalOffset=0;renderHome();renderLesson();renderMetrics();renderCalendar();renderReview();renderRecords();
-</script></body></html>
+</script><script src="./cet6-reading-tools.js"></script></body></html>
